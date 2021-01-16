@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Hello from "./components/pages/Hello";
+import AllNotes from "./components/pages/All";
+import Daily from "./components/pages/Daily";
+import Urgent from "./components/pages/Urgent";
+import Others from "./components/pages/Others";
+import Calendar from "./components/pages/Calendar";
+import SignUp from "./components/pages/SignUp";
+import Notes from "./components/pages/Notes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Hello} />
+        <Route path="/notes" component={Notes} />
+        <Route path="/all" component={AllNotes} />
+        <Route path="/daily" component={Daily} />
+        <Route path="/urgent" component={Urgent} />
+        <Route path="/others" component={Others} />
+        <Route path="/calendar" component={Calendar} />
+        <Route path="/signup" component={SignUp} />
+      </Switch>
+    </Router>
   );
 }
 
