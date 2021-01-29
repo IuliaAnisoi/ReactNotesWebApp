@@ -1,0 +1,78 @@
+.noteform {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 15px;
+  padding: 10px;
+  text-align: center;
+}
+.noteform .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+.label {
+  display: block;
+  justify-content: left;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Styling for the list of notes */
+.notes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+}
+.notes .note {
+  background: #ffffff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+}
+
+.notes .note .note-title {
+  background: #357a38;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes .note .note-title h3 {
+  color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+.notes .note .note-title .remove {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.notes .note .note-title .edit {
+  color: white;
+  cursor: pointer;
+}
+
+.notes .note .note-content {
+  padding: 15px;
+}
+
+.input {
+  border: 0;
+}
+.input:focus {
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .notes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

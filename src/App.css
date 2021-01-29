@@ -6,16 +6,28 @@
 }
 
 .hello,
-.notes,
-.all,
-.daily,
-.urgent,
-.others,
-.calendar,
-.signup {
-  display: flex;
-  height: 90vh;
+.calendar {
+  font-style: italic;
   align-items: center;
   justify-content: center;
+  display: flex;
+  height: 90vh;
   font-size: 3rem;
+}
+
+.hello {
+  background-image: url("/Users/anisoiiuliaroxana/Desktop/iap/notes/src/images/lake-1581879_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+.calendar {
+  background-image: url("/Users/anisoiiuliaroxana/Desktop/iap/notes/src/images/nature-2384_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
